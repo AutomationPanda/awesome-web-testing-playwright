@@ -337,6 +337,11 @@ This solution won't work when tests run in parallel,
 but we will address that in a later chapter.
 Let's keep things simple for now while we are learning the basics.
 
+Thankfully, the Trello-like app has a secret API endpoint that essentially drops the whole database.
+Calling `POST /api/reset` will delete everything in the database.
+This endpoint should be used only for testing purposes.
+
+[Playwright can call APIs](https://playwright.dev/docs/api-testing) using the `request` fixture.
 Create a `test.beforeAll` hook,
 and inside it, call `POST /api/reset` to the app:
 
