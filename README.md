@@ -37,7 +37,7 @@ The Playwright browsers are a few hundred MBs large,
 and you could fall behind if you are stuck waiting for slow downloads over WiFi.
 
 
-## Tutorial Instructions
+## Tutorial instructions
 
 There are eight chapters in total:
 
@@ -52,3 +52,8 @@ There are eight chapters in total:
 
 Chapter-by-chapter tutorial instructions are provided under the `tutorial` folder.
 This repository also contains a branch for each chapter's example code.
+
+
+## Ready to get started?
+
+Go to [Chapter 1](tutorial/01-testing-goals.md) to start the tutorial!
