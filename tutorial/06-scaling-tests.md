@@ -133,7 +133,7 @@ Change the code to look like this:
 
         await request.post('http://localhost:3000/api/boards', {data: {name: boardName}});
         await myBoardsPage.load();
-        await myBoardsPage.clickBoard(boardName);
+        await myBoardsPage.openBoard(boardName);
     });
 ```
 
