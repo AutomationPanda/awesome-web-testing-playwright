@@ -115,4 +115,4 @@ two other popular browser automation tools:
 
 ![Browser automation tool comparison](images/ch01/tool-comparison.png)
 
-Proceed to [Chapter 2](../02-initial-exploreation.md)
+Proceed to [Chapter 2](../02-initial-exploration.md)
