@@ -12,8 +12,8 @@ let's create a new test project.
 Create a new directory:
 
 ```
-mkdir awesome-playwright-tests
-cd awesome-playwright-tests
+mkdir playwright-workshop
+cd playwright-workshop
 ```
 
 Then, initialize Playwright:
