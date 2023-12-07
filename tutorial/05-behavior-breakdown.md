@@ -237,3 +237,5 @@ There are some tradeoffs to consider with this approach:
 * API calls should be used for setup and cleanup, *not* for the main behaviors.
 
 Use your best judgment when and where to try to optimize test setup and cleanup with API calls.
+
+Continue to [Chapter 6](06-scaling-tests.md)

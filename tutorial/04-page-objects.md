@@ -438,3 +438,5 @@ test('Create a new board with a list and cards', async (
 
 That's a little cleaner, and the page objects are even easier to use now.
 Rerun the test again to make sure everything works.
+
+Continue to [Chapter 5](05-behavior-breakdown.md)

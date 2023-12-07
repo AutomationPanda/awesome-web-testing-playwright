@@ -177,3 +177,5 @@ With the data strategy we chose, tests will continue to add more and more boards
 Eventually, the database should be reset,
 or else it could cripple the app or the machine running the app.
 Database reset should be done every so often outside of the test automation code.
+
+Continue to [Chapter 7](07-github-actions.md)

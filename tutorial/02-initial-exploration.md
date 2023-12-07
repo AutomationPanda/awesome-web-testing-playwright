@@ -194,3 +194,5 @@ You'll see Playwright code generated in real time.
 Once recording is complete, you can copy the code and refine it into a test case.
 
 ![Playwright test generator](images/ch02/test-generator.png)
+
+Continue to [Chapter 3](03-first-test.md)

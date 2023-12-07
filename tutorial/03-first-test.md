@@ -436,3 +436,5 @@ npx playwright test tests/trello.spec.ts --workers 1
 ```
 
 We will fix this later in the tutorial.
+
+Continue to [Chapter 4](04-page-objects.md)

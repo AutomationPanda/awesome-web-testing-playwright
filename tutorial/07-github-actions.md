@@ -102,3 +102,5 @@ select "Run the example tests",
 and click "Run workflow".
 You will see the workflow launch (hopefully) after a few seconds.
 You can watch the console output as the workflows run.
+
+Continue to [Chapter 8](08-learning-more.md)
