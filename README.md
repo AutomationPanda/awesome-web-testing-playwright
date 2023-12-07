@@ -14,6 +14,7 @@ You will need the following tools:
 
 1. A recent version of [Node.js](https://nodejs.org/).
 2. A good editor like [Visual Studio Code](https://code.visualstudio.com/) with the [Playwright extension](https://playwright.dev/docs/getting-started-vscode).
+2. 1. A lightweight alternative will be [Notepad++](https://notepad-plus-plus.org/downloads/) and the system terminal.
 3. A [GitHub](https://github.com/) account with a [Git](https://git-scm.com/) client.
 
 
@@ -22,8 +23,8 @@ You will need the following tools:
 Before starting this tutorial, create the new project using the following commands:
 
 ```
-mkdir awesome-playwright-tests
-cd awesome-playwright-tests
+mkdir playwright-workshop
+cd playwright-workshop
 npm init playwright@latest
 ```
 
