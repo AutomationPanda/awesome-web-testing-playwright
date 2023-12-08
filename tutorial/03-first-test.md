@@ -17,7 +17,7 @@ Filip has granted his permission for us to use this project.
 The GitHub repository for this app is:<br>
 https://github.com/filiphric/trelloapp-vue-vite-ts
 
-Clone the repository in a separate location from the `awesome-playwright-tests`:
+Clone the repository in a separate location from the `playwright-tutorial`:
 
 ```
 cd </some/different/path>
