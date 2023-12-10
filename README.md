@@ -29,7 +29,20 @@ npm init playwright@latest
 
 Choose the default options for each prompt.
 Choose YES to install the Playwright browsers.
-This tutorial was created with Playwright 1.36.1.
+This tutorial was created with Playwright 1.36.1,
+but later versions of Playwright should be okay to use.
+
+This tutorial also uses a local web app for testing.
+This web app is located in a [separate project](https://github.com/filiphric/trelloapp-vue-vite-ts).
+Put this project in a separate directory from `awesome-playwright-tests`.
+Clone it from GitHub and install its dependencies using the following commands.
+
+```
+cd ..
+git clone https://github.com/filiphric/trelloapp-vue-vite-ts.git
+cd trelloapp-vue-vite-ts
+npm install
+```
 
 *Warning:*
 **Complete these steps *before* taking this tutorial as part of a live session** (like at a conference or a webinar).
