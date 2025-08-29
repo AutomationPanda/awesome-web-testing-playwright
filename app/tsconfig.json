@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ES2020",
+    "strict": true,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "baseUrl": "./",
+    "lib": [
+      "ES2018",
+      "dom"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "@vuedx/typescript-plugin-vue"
+      }
+    ],
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "types": [
+      "node",
+    ],
+  },
+  "include": [
+    "tests/**/*.ts",
+    "src/**/*"
+  ]
+}
