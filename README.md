@@ -3,9 +3,11 @@
 This repository contains the [Automation Panda](https://automationpanda.com/)'s official Playwright tutorial!
 
 In this tutorial, you will progressively create and build a new test automation project using Playwright in TypeScript.
-This GitHub repository provides all instructions for the tutorial.
-It also provides example code for each chapter,
-so you can compare your code to the example if you get stuck.
+This GitHub repository provides:
+
+1. an [`app`](/app/) directory with the web app to test
+2. a [`tutorial`](/tutorial/) directory with all instructions by chapter
+3. a [`tests`](/tests/) directory with example code for each chapter
 
 
 ## Prerequisites
@@ -19,11 +21,19 @@ You will need the following tools:
 
 ## Tutorial setup
 
-Before starting this tutorial, create the new project using the following commands:
+Before starting this tutorial, clone this repository to your machine and set up the project:
 
-```
-mkdir awesome-playwright-tests
-cd awesome-playwright-tests
+```sh
+# Clone the repository
+git clone https://github.com/AutomationPanda/awesome-web-testing-playwright.git
+
+# Change directory into the web app directory
+cd awesome-web-testing-playwright/app
+
+# Install the dependencies
+npm install
+
+# Initialize Playwright
 npm init playwright@latest
 ```
 
@@ -31,18 +41,6 @@ Choose the default options for each prompt.
 Choose YES to install the Playwright browsers.
 This tutorial was created with Playwright 1.36.1,
 but later versions of Playwright should be okay to use.
-
-This tutorial also uses a local web app for testing.
-This web app is located in a [separate project](https://github.com/filiphric/trelloapp-vue-vite-ts).
-Put this project in a separate directory from `awesome-playwright-tests`.
-Clone it from GitHub and install its dependencies using the following commands.
-
-```
-cd ..
-git clone https://github.com/filiphric/trelloapp-vue-vite-ts.git
-cd trelloapp-vue-vite-ts
-npm install
-```
 
 *Warning:*
 **Complete these steps *before* taking this tutorial as part of a live session** (like at a conference or a webinar).
