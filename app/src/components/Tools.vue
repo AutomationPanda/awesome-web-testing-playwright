@@ -2,7 +2,7 @@
   <div
     class="fixed right-0 bottom-0 p-5 m-3 rounded-sm"
     style="background: rgb(0 0 0 / 0.1)"
-    data-cy="api-tools"
+    data-testid="api-tools"
   >
     Reset application:
     <button

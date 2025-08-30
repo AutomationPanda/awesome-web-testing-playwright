@@ -1,7 +1,7 @@
 <template>
   <button
     class="inline-flex justify-center items-center py-2 px-4 mt-2 w-full text-sm text-white hover:bg-zinc-50 border"
-    data-cy="google-button"
+    data-testid="google-button"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

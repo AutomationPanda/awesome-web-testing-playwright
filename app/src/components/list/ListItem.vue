@@ -1,7 +1,7 @@
 <template>
   <div
     class="relative p-1.5 mb-32 ml-3 w-list bg-gray2 rounded shadow-md"
-    data-cy="list"
+    data-testid="list"
     @dragenter="isDragging = true"
     @dragleave="isDragging = false"
   >
@@ -9,7 +9,7 @@
       <input
         v-click-away="onClickAway"
         class="inline-block flex-grow py-0.5 px-1 h-8 text-sm font-semibold text-gray-900 bg-gray2 focus:bg-gray1 rounded-sm border-2 border-transparent focus:border-blue6 outline-none cursor-pointer"
-        data-cy="list-name"
+        data-testid="list-name"
         :value="list.name"
         @mouseup="
           selectInput($event);
@@ -28,7 +28,7 @@
       />
     </div>
     <div
-      data-cy="card-list"
+      data-testid="card-list"
       :class="isDragging ?? 'min-h-[100px]'"
     >
       <div
@@ -52,7 +52,7 @@
       <div
         v-if="!cardCreate"
         class="py-1.5 px-2 text-sm font-normal text-gray-500 hover:text-gray-600 hover:bg-gray4 rounded-md cursor-pointer"
-        data-cy="new-card"
+        data-testid="new-card"
         @click="showCardCreate(true)"
       >
         <Plus class="inline-block w-3 h-3" />Add another card

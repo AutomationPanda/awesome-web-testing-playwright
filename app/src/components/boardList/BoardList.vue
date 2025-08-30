@@ -1,7 +1,7 @@
 <template>
   <div
     class="grid h-screen bg-white background board-list"
-    data-cy="board-list"
+    data-testid="board-list"
   >
     <!-- LOADING -->
     <Loading />
@@ -16,7 +16,7 @@
       <div v-if="state.starred.length">
         <h1
           class="inline-block py-5 mx-4 text-3xl font-semibold"
-          data-cy="starred-boards"
+          data-testid="starred-boards"
         >
           Starred
         </h1>

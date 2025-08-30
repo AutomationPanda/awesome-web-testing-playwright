@@ -6,7 +6,7 @@
       </h1>
       <div
         v-if="pricing.discountEligible"
-        data-cy="discount"
+        data-testid="discount"
         class="grid mx-auto mt-4 max-w-2xl bg-yellow-100 rounded-sm border border-yellow-300"
       >
         <p class="pb-1 text-center">
@@ -21,7 +21,7 @@
         <div class="mt-6 space-y-8 xl:mt-12">
           <div
             class="flex justify-between items-center py-4 px-8 mx-auto max-w-2xl rounded-sm border cursor-pointer"
-            data-cy="plan-item"
+            data-testid="plan-item"
             :class="plan.id === pricing.activePlan && 'border-blue6 text-blue6'"
             @click="pricing.activePlan = plan.id"
           >
@@ -43,7 +43,7 @@
             <h2
               class="text-2xl font-semibold sm:text-4xl"
               :class="plan.id === pricing.activePlan ? 'text-blue6' : 'text-gray-500'"
-              data-cy="plan-price"
+              data-testid="plan-price"
             >
               {{ pricing.currency === 'EUR' ? '€' : pricing.currency === 'GBP' ? '£' : '$' }} {{ plan.price[pricing.currency] }}
               <span class="text-base font-medium">/ Month</span>
@@ -54,7 +54,7 @@
       <div class="flex justify-center mt-6">
         <button
           class="py-2 px-8 tracking-wide text-white capitalize bg-green7 hover:bg-green6 rounded-sm focus:outline-none"
-          data-cy="find-location"
+          data-testid="find-location"
           @click="geolocation"
         >
           Find my location

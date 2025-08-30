@@ -13,13 +13,13 @@
         v-click-away="onClickAway"
         type="text"
         class="px-3 w-96 h-14 text-2xl bg-white border-b-2 border-slate-300 outline-none"
-        data-cy="search-input"
+        data-testid="search-input"
         @keyup="triggerSearch"
       >
       <div
         v-for="result in searchResults"
         :key="result.id"
-        data-cy="result-item"
+        data-testid="result-item"
         class="flex w-96 h-12 text-xl bg-white border-slate-600 border-b-1"
       >
         <a

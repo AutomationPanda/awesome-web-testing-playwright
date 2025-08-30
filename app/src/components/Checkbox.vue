@@ -2,7 +2,7 @@
   <label class="inline-flex items-center">
     <input
       type="checkbox"
-      data-cy="card-checkbox"
+      data-testid="card-checkbox"
       :checked="card.completed"
       @click.stop="patchCard(card, { completed: !card.completed })"
     >

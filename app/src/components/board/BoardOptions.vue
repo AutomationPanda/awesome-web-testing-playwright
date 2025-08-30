@@ -1,7 +1,7 @@
 <template>
   <div class="inline-block relative">
     <button
-      data-cy="board-options"
+      data-testid="board-options"
       class="inline-grid self-center ml-2 w-8 h-8 text-white bg-white bg-opacity-20 hover:bg-opacity-30 rounded-sm cursor-pointer"
       @click="showDropdown()"
     >
@@ -10,14 +10,14 @@
     <Dropdown
       v-if="dropdown"
       v-click-away="onClickAway"
-      data-cy="board-dropdown"
+      data-testid="board-dropdown"
       :header="'Board actions'"
       @close="hideDropdown()"
     >
       <DropdownItem
         item-text="Delete board"
         :warning="true"
-        data-cy="delete-board"
+        data-testid="delete-board"
         @click="
           deleteBoard(board.id);
           router.push('/');

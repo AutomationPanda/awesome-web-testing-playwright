@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full h-40 border-4 border-gray-400 border-dashed"
-    data-cy="upload-image"
+    data-testid="upload-image"
     :class="isDragActive && 'border-gray-800'"
     accept="image/png, image/gif, image/jpeg"
     @dragenter.prevent="dragActive"

@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex fixed top-0 left-0 z-40 justify-center items-center w-full h-full bg-backdrop"
-    data-cy="card-detail-backdrop"
+    data-testid="card-detail-backdrop"
     @click.self="
       showCardModule(activeCard.id, false);
       router.push(router.currentRoute.value.path);
@@ -9,7 +9,7 @@
   >
     <div
       class="grid overflow-scroll grid-cols-8 gap-x-2 p-8 w-cardDetail h-5/6 bg-gray2"
-      data-cy="card-detail"
+      data-testid="card-detail"
     >
       <div class="col-span-6 text-gray-800">
         <div class="mb-4 ml-9">
@@ -20,7 +20,7 @@
             v-model="activeCard.name"
             v-click-away="clickAwayCardName"
             class="py-1 focus:px-1.5 w-full font-bold bg-gray2 focus:bg-white rounded-sm cursor-pointer"
-            data-cy="card-detail-title"
+            data-testid="card-detail-title"
             @focus="
               selectInput($event);
               cardNameInputActive = true;
@@ -38,7 +38,7 @@
           <h2 class="text-sm text-gray10">
             in list <span
               class="underline"
-              data-cy="card-list-name"
+              data-testid="card-list-name"
             >{{ cardListName }}</span>
           </h2>
         </div>
@@ -63,7 +63,7 @@
                 OVERDUE
               </div>
               <button
-                data-cy="calendar-dropdown"
+                data-testid="calendar-dropdown"
                 @click="showDate = true"
               >
                 <Downarrow class="inline-block py-2 pl-2 w-5 text-gray-800 cursor-pointer fill-current stroke-current" />
@@ -79,31 +79,31 @@
                 inline
                 auto-apply
                 :enable-time-picker="false"
-                data-cy="card-detail-deadline"
+                data-testid="card-detail-deadline"
                 @update:model-value="updateDate"
               >
                 <template #day="{ day }">
-                  <div data-cy="day">
+                  <div data-testid="day">
                     {{ day }}
                   </div>
                 </template>
                 <template #month="{ text }">
-                  <div data-cy="header-month">
+                  <div data-testid="header-month">
                     {{ text }}
                   </div>
                 </template>
                 <template #month-overlay="{ text }">
-                  <div data-cy="month">
+                  <div data-testid="month">
                     {{ text }}
                   </div>
                 </template>
                 <template #year="{ year }">
-                  <div data-cy="header-year">
+                  <div data-testid="header-year">
                     {{ year }}
                   </div>
                 </template>
                 <template #year-overlay="{ text }">
-                  <div data-cy="year">
+                  <div data-testid="year">
                     {{ text }}
                   </div>
                 </template>
@@ -121,7 +121,7 @@
           <textarea
             v-model="activeCard.description"
             class="p-3 w-full h-36 resize-none"
-            data-cy="card-description"
+            data-testid="card-description"
             @focus="
               selectInput($event);
               descriptionInputActive = true;
@@ -147,7 +147,7 @@
           <div
             v-if="activeCard.image"
             class="grid grid-cols-6 gap-x-4"
-            data-cy="image-attachment"
+            data-testid="image-attachment"
           >
             <div class="col-span-2 row-span-2">
               <img :src="'/backend' + activeCard.image">
@@ -156,7 +156,7 @@
               {{ activeCard.image.replace(`/data/uploaded/${activeCard.id}_`, '') }}
               <a
                 class="block font-normal underline cursor-pointer"
-                data-cy="image-delete"
+                data-testid="image-delete"
                 :href="'/backend' + activeCard.image"
                 download
               >
@@ -164,7 +164,7 @@
               </a>
               <div
                 class="block font-normal underline cursor-pointer"
-                data-cy="image-delete"
+                data-testid="image-delete"
                 @click="patchCard(activeCard, { image: null })"
               >
                 <Cross class="inline-block mb-1 w-4" />Delete
@@ -189,21 +189,21 @@
         </div>
         <div
           class="py-0.5 px-2 text-sm text-gray-600 bg-gray3 hover:bg-gray5 rounded-sm cursor-pointer"
-          data-cy="calendar-button"
+          data-testid="calendar-button"
           @click="showDate = true"
         >
           <Clock class="inline-block mr-2 mb-0.5 w-4" />Due date
         </div>
         <div
           class="py-0.5 px-2 text-sm text-gray-600 bg-gray3 hover:bg-gray5 rounded-sm cursor-pointer"
-          data-cy="copy-properties"
+          data-testid="copy-properties"
           @click="copyProperties(activeCard)"
         >
           <Copy class="inline-block mr-2 mb-0.5 w-4" />Copy attributes
         </div>
         <div
           class="py-0.5 px-2 text-sm text-gray-600 bg-gray3 hover:bg-gray5 rounded-sm cursor-pointer"
-          data-cy="card-detail-delete"
+          data-testid="card-detail-delete"
           @click="
             deleteCard(activeCard);
             router.push(router.currentRoute.value.path);

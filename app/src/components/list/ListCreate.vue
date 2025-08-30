@@ -8,7 +8,7 @@
       ref="listCreate"
       v-model="listTitle"
       class="py-2 px-2 w-full h-9 text-sm rounded-sm border-2 border-transparent focus:border-blue6 outline-none"
-      data-cy="add-list-input"
+      data-testid="add-list-input"
       placeholder="Enter list title..."
       @keyup.enter.prevent="addList()"
       @keyup.esc.prevent="
@@ -23,7 +23,7 @@
       />
       <Cross
         class="inline-block order-last p-1 mx-0.5 w-8 h-8 text-gray-600 fill-current"
-        data-cy="cancel"
+        data-testid="cancel"
         @click.stop="
           createListInput = false;
           listTitle = '';
@@ -34,7 +34,7 @@
   <div
     v-else
     class="p-2.5 ml-3 w-list text-sm text-gray-50 bg-white bg-opacity-20 hover:bg-opacity-30 rounded cursor-pointer flex-no-shrink"
-    data-cy="create-list"
+    data-testid="create-list"
     @click="enableInput()"
   >
     <Plus class="inline-block w-3 h-3" /> {{ !lists.length ? 'Add a list' : 'Add another list' }}

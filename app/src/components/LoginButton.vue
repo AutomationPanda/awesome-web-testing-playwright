@@ -7,7 +7,7 @@
     <div
       v-show="!activeUser.loggedIn"
       class="flex self-center h-8 text-sm bg-white bg-opacity-30 hover:bg-opacity-20 rounded-sm cursor-pointer"
-      data-cy="login-menu"
+      data-testid="login-menu"
       @click="router.push('/login')"
     >
       <User class="self-center ml-2 w-6 h-6" />
@@ -17,7 +17,7 @@
     <div
       v-show="activeUser.loggedIn"
       class="flex self-center h-8 text-sm bg-white bg-opacity-30 hover:bg-opacity-20 rounded-sm cursor-pointer"
-      data-cy="logged-user"
+      data-testid="logged-user"
       @click="
         logout();
         getBoardList();

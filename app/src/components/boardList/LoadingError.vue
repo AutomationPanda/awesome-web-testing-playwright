@@ -1,7 +1,7 @@
 <template>
   <div
     class="place-self-center"
-    data-cy="board-list-error-message"
+    data-testid="board-list-error-message"
   >
     <span class="block mb-4 text-8xl font-bold text-center text-gray-200">{{ loadingError.status }}</span>
     <p class="block mb-4 text-center text-gray-400">

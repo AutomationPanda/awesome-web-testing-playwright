@@ -1,14 +1,14 @@
 <template>
   <nav class="shadow-xl">
     <button
-      data-cy="home"
+      data-testid="home"
       :class="[route.path !== '/' ? 'visible' : 'invisible']"
       @click="router.push('/')"
     >
       <Home class="place-self-center" />
     </button>
     <img
-      data-cy="trello-logo"
+      data-testid="trello-logo"
       src="@/assets/trello-logo.gif"
       @click="router.push('/')"
     >

@@ -7,7 +7,7 @@
       ref="cardCreate"
       v-model="cardTitle"
       class="py-1 px-2 w-full h-16 text-sm rounded border-b border-gray7 outline-none resize-none"
-      data-cy="new-card-input"
+      data-testid="new-card-input"
       placeholder="Enter a title for this card..."
       @keydown.enter.prevent="addCard"
       @keyup.esc.prevent="
@@ -21,7 +21,7 @@
         @click="addCard"
       />
       <Cross
-        data-cy="cancel"
+        data-testid="cancel"
         class="inline-block order-last p-1 mx-0.5 w-8 h-8 text-gray-600 fill-current"
         @click.stop="
           emit('toggleInput', false);

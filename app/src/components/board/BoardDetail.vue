@@ -14,7 +14,7 @@
     <div
       v-if="state.loadingError.show"
       class="grid justify-center content-center h-screen"
-      data-cy="board-list-error-message"
+      data-testid="board-list-error-message"
     >
       <span class="block mb-4 text-8xl font-bold text-center text-gray-200">{{ state.loadingError.status }}</span>
       <p class="block mb-4 text-center text-gray-400">
@@ -31,7 +31,7 @@
     <div
       v-if="!state.loading && !state.loadingError.show"
       class="overflow-x-auto whitespace-nowrap board-detail"
-      data-cy="board-detail"
+      data-testid="board-detail"
     >
       <div class="py-2.5">
         <div class="inline-block relative py-1.5 mr-0 ml-3 h-8">
@@ -42,7 +42,7 @@
             v-model="state.board.name"
             v-click-away="onClickAway"
             class="text-white bg-white bg-opacity-20 hover:bg-opacity-30 board-title"
-            data-cy="board-title"
+            data-testid="board-title"
             autocomplete="off"
             name="board-title"
             @focus="selectInput($event)"
@@ -54,7 +54,7 @@
         <div
           class="inline-grid relative self-center ml-2 w-8 h-8 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-sm cursor-pointer"
           :class="[state.board.starred ? 'fill-current text-yellow-300' : 'stroke-current text-white']"
-          data-cy="star"
+          data-testid="star"
           @click="
             state.patchBoard(state.board, {
               starred: !state.board.starred,
@@ -76,7 +76,7 @@
         <template #item="{ element }">
           <div
             class="inline-block align-top"
-            data-cy="list-placeholder"
+            data-testid="list-placeholder"
           >
             <ListItem :list="element" />
           </div>

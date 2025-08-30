@@ -4,7 +4,7 @@
     @click="$emit('toggleInput', true)"
   >
     <Plus class="inline-block w-3 h-3" />
-    <div data-cy="new-card">
+    <div data-testid="new-card">
       Add another card
     </div>
   </div>

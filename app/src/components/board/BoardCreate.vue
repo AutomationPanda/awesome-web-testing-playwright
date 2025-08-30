@@ -1,7 +1,7 @@
 <template>
   <div
     v-click-away="onClickAway"
-    data-cy="create-board"
+    data-testid="create-board"
     class="create-board"
     :class="{ 'hover:bg-gray7': !newBoardInputActive }"
     @click.prevent="focusNewBoardInput"
@@ -14,7 +14,7 @@
       ref="boardCreateInput"
       v-model="newBoardTitle"
       class="new-board-input"
-      data-cy="new-board-input"
+      data-testid="new-board-input"
       placeholder="Add board title"
       @keyup.enter.prevent="redirectToNewBoard()"
     >
@@ -27,7 +27,7 @@
         @click.stop="inputVisible(false)"
       />
       <SaveButton
-        data-cy="new-board-create"
+        data-testid="new-board-create"
         buttontext="Create board"
         @click.stop="redirectToNewBoard()"
       />

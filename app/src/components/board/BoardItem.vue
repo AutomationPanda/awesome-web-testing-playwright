@@ -7,7 +7,7 @@
     <div
       class="board"
       :id="'board-' + board.id"
-      data-cy="board-item"
+      data-testid="board-item"
       @click="navigate"
       @mouseover="showStar = true"
       @mouseout="showStar = false"
@@ -17,7 +17,7 @@
       </h2>
       <div
         v-show="showStar"
-        data-cy="star"
+        data-testid="star"
         class="star"
         @click.stop="patchBoard(board, { starred: !board.starred })"
       >

@@ -1,6 +1,6 @@
 <template>
   <div
-    data-cy="card"
+    data-testid="card"
     class="grid relative p-2 my-1.5 w-full bg-white hover:bg-gray1 rounded border border-gray1 border-solid drop-shadow-sm cursor-pointer card"
     @click="showCardModule(card.id, true)"
   >
@@ -9,7 +9,7 @@
       <div
         class="flex-grow pl-2 text-sm text-gray-800 select-none"
         style="white-space: break-spaces"
-        data-cy="card-text"
+        data-testid="card-text"
       >
         {{ card.name }}
       </div>
@@ -17,7 +17,7 @@
     </div>
     <div
       class="py-1 px-1.5 mt-1 w-[fit-content] text-xs rounded-sm"
-      data-cy="due-date"
+      data-testid="due-date"
       :class="card.completed ? 'completed' : overdue(card) ? 'overdue' : 'text-gray9'"
     >
       <Clock class="inline-block w-4 h-4 fill-current" />

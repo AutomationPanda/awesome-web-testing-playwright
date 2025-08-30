@@ -16,12 +16,12 @@ export class BoardPage {
     this.page = page;
     this.boardTitle = page.locator('[name="board-title"]');
     this.enterListTitle = page.getByPlaceholder('Enter list title...');
-    this.boardLists = page.locator('[data-cy="list"]');
-    this.listName = page.locator('[data-cy="list-name"]');
+    this.boardLists = page.locator('[data-testid="list"]');
+    this.listName = page.locator('[data-testid="list-name"]');
     this.addAnotherCard = page.getByText('Add another card');
     this.enterCardTitle = page.getByPlaceholder('Enter a title for this card...');
     this.addCard = page.getByRole('button', { name: 'Add card' });
-    this.cardTexts = page.locator('[data-cy="card-text"]');
+    this.cardTexts = page.locator('[data-testid="card-text"]');
     this.homeButton = page.getByRole('navigation').getByRole('button');
   }
 

@@ -1,6 +1,6 @@
 <template>
   <button
-    data-cy="list-options"
+    data-testid="list-options"
     class="inline-grid self-center ml-2 w-8 h-8 text-white bg-white bg-opacity-20 hover:bg-opacity-30 rounded-sm cursor-pointer"
     @click="showDropdown()"
   >
@@ -11,13 +11,13 @@
   <Dropdown
     v-if="dropdown"
     v-click-away="onClickAway"
-    data-cy="list-dropdown"
+    data-testid="list-dropdown"
     :header="'List actions'"
     @close="hideDropdown()"
   >
     <DropdownItem
       item-text="Add another card"
-      data-cy="card-add"
+      data-testid="card-add"
       @click="
         emit('toggle-input', true);
         hideDropdown();
@@ -26,7 +26,7 @@
     <DropdownItem
       item-text="Delete list"
       :warning="true"
-      data-cy="delete-list"
+      data-testid="delete-list"
       @click="
         deleteList(list.id);
         hideDropdown();

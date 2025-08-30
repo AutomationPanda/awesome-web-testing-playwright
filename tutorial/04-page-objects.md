@@ -18,12 +18,12 @@ Let's revisit the test code we wrote in the previous chapter:
     await page.getByPlaceholder('Name of your first board').press('Enter');
     await expect(page.locator('[name="board-title"]')).toHaveValue('Chores');
     await expect(page.getByPlaceholder('Enter list title...')).toBeVisible();
-    await expect(page.locator('[data-cy="list"]')).not.toBeVisible();
+    await expect(page.locator('[data-testid="list"]')).not.toBeVisible();
 
     // Create a new list
     await page.getByPlaceholder('Enter list title...').fill('TODO');
     await page.getByPlaceholder('Enter list title...').press('Enter');
-    await expect(page.locator('[data-cy="list-name"]')).toHaveValue('TODO');
+    await expect(page.locator('[data-testid="list-name"]')).toHaveValue('TODO');
 
     // Add cards to the list
     await page.getByText('Add another card').click();
@@ -33,7 +33,7 @@ Let's revisit the test code we wrote in the previous chapter:
     await page.getByRole('button', { name: 'Add card' }).click();
     await page.getByPlaceholder('Enter a title for this card...').fill('Walk the dog');
     await page.getByRole('button', { name: 'Add card' }).click();
-    await expect(page.locator('[data-cy="card-text"]')).toHaveText(
+    await expect(page.locator('[data-testid="card-text"]')).toHaveText(
         ['Buy groceries', 'Mow the lawn', 'Walk the dog']);
     
     // Navigate to the home page
@@ -178,12 +178,12 @@ export class BoardPage {
         this.page = page;
         this.boardTitle = page.locator('[name="board-title"]');
         this.enterListTitle = page.getByPlaceholder('Enter list title...');
-        this.boardLists = page.locator('[data-cy="list"]');
-        this.listName = page.locator('[data-cy="list-name"]');
+        this.boardLists = page.locator('[data-testid="list"]');
+        this.listName = page.locator('[data-testid="list-name"]');
         this.addAnotherCard = page.getByText('Add another card');
         this.enterCardTitle = page.getByPlaceholder('Enter a title for this card...');
         this.addCard = page.getByRole('button', { name: 'Add card' });
-        this.cardTexts = page.locator('[data-cy="card-text"]');
+        this.cardTexts = page.locator('[data-testid="card-text"]');
         this.homeButton = page.getByRole('navigation').getByRole('button');
     }
 

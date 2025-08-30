@@ -9,14 +9,14 @@
         v-model="loginForm.email"
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
         placeholder="Email"
-        data-cy="login-email"
+        data-testid="login-email"
         name="email"
       >
       <label for="password">Password</label>
       <input
         v-model="loginForm.password"
         type="password"
-        data-cy="login-password"
+        data-testid="login-password"
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
         placeholder="Password"
         name="password"
@@ -27,7 +27,7 @@
         "
       >
       <button
-        data-cy="login-submit"
+        data-testid="login-submit"
         class="py-2 w-full text-white bg-green7 hover:bg-green6"
         @click="
           login(loginForm.email, loginForm.password).then(() => {

@@ -10,14 +10,14 @@
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
         placeholder="Email"
         name="email"
-        data-cy="signup-email"
+        data-testid="signup-email"
       >
       <label for="password">Password</label>
       <input
         v-model="signupForm.password"
         type="password"
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
-        data-cy="signup-password"
+        data-testid="signup-password"
         placeholder="Password"
         name="password"
         @keyup.enter="
@@ -40,7 +40,7 @@
       </div>
       <button
         class="py-2 w-full text-white bg-green7 hover:bg-green6"
-        data-cy="signup-submit"
+        data-testid="signup-submit"
         @click="
           signup(signupForm.email, signupForm.password, signupForm.welcomeEmail).then(() => {
             router.push('/');
