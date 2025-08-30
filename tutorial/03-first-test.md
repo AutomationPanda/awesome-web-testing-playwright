@@ -17,24 +17,18 @@ Filip has granted his permission for us to use this project.
 The GitHub repository for this app is:<br>
 https://github.com/filiphric/trelloapp-vue-vite-ts
 
-Clone the repository in a separate location from the `awesome-playwright-tests`:
+The code for this app has been copied into the [`app`](../app/) directory.
+If you haven't already done so, changed directory and install its dependencies:
 
-```
-cd </some/different/path>
-git clone https://github.com/filiphric/trelloapp-vue-vite-ts.git
-```
-
-Then, install the project's dependencies:
-
-```
-cd trelloapp-vue-vite-ts
+```sh
+cd app
 npm install
 ```
 
 Make sure there are no errors.
-Finally, run the app:
+Then, run the app:
 
-```
+```sh
 npm start
 ```
 
@@ -54,6 +48,9 @@ and you should see the app's "Get Started!" page:
 
 ![Trello Get Started page](images/ch03/trello-get-started.png)
 
+**Note:** All commands and code will be done inside the [`app`](../app/) directory.
+Make sure to treat it as your "root" directory.
+
 
 ## Generating a script
 
@@ -64,7 +61,7 @@ we can use Playwright's test generator to record most of the interactions the te
 
 Launch the recorder:
 
-```
+```sh
 npx playwright codegen
 ```
 
@@ -412,7 +409,7 @@ test('Create a new board with a list and cards', async ({ page }) => {
 
 Let's run this test from UI mode:
 
-```
+```sh
 npx playwright test --ui
 ```
 
@@ -431,7 +428,7 @@ If you want to run this test from the command line, be careful.
 Our test data management strategy would not work if we run multiple tests in parallel.
 For now, we need to limit our test execution to one worker:
 
-```
+```sh
 npx playwright test tests/trello.spec.ts --workers 1
 ```
 

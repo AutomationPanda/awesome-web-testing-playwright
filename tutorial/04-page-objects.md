@@ -315,13 +315,13 @@ Future tests can use these page objects as well.
 
 Rerun the test using either UI mode:
 
-```
+```sh
 npx playwright test --ui
 ```
 
 Or the command line:
 
-```
+```sh
 npx playwright test tests/trello.spec.ts --workers 1
 ```
 

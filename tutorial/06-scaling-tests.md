@@ -11,7 +11,7 @@ Ever since we started writing tests for the Trello-like app,
 We have run our tests *serially*, meaning one at a time.
 Try running them in *parallel*, and watch what happens:
 
-```
+```sh
 npx playwright test tests/trello.spec.ts
 ```
 
@@ -162,7 +162,7 @@ and remove it from `tests/fixtures/trello-test.ts` since it is no longer used.
 
 Rerun the tests in parallel with the updated code:
 
-```
+```sh
 npx playwright test tests/trello.spec.ts
 ```
 

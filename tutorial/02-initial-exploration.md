@@ -8,17 +8,28 @@ by creating a new project and running the example tests.
 ## Creating a new Playwright project
 
 If you haven't already done so as part of [tutorial preparations]((../README.md#tutorial-setup)),
-let's create a new test project.
-Create a new directory:
+let's set up the project.
+Clone this repository from GitHub:
 
+```sh
+git clone https://github.com/AutomationPanda/awesome-web-testing-playwright.git
 ```
-mkdir awesome-playwright-tests
-cd awesome-playwright-tests
+
+Change directory into the `app` directory:
+
+```sh
+cd awesome-web-testing-playwright/app
+```
+
+Install the project dependencies:
+
+```sh
+npm install
 ```
 
 Then, initialize Playwright:
 
-```
+```sh
 npm init playwright@latest
 ```
 
@@ -41,12 +52,8 @@ The command will also install the Playwright browser projects: Chromium, Firefox
 Beware that browser installation may take several minutes if your Internet connection is slow.
 
 *Note:*
-This tutorial was developed with Playwright 1.36.1.
+This tutorial was last updated with Playwright 1.55.0.
 Things might change in future versions.
-
-*Note:*
-If you are setting up an existing project that has Playwright as a dependency,
-then you will need to run `npm install` and then `npx playwright install` to install Playwright properly.
 
 
 ## Running the tests visually
@@ -58,7 +65,7 @@ Let's use it to explore the automatically-generated example tests.
 
 Run the following command to open UI mode:
 
-```
+```sh
 npx playwright test --ui
 ```
 
@@ -115,7 +122,7 @@ Running tests from UI mode is helpful when developing the app and the tests,
 but it's not ideal for running tests in a Continuous Integration (CI) system.
 You can run tests directly from the command line like this:
 
-```
+```sh
 npx playwright test
 ```
 
@@ -140,7 +147,7 @@ Chromium, Firefox, and WebKit.
 
 You can view the full test report by running:
 
-```
+```sh
 npx playwright show-report
 ```
 
@@ -154,7 +161,7 @@ If you want to run tests against only one browser instead of all browsers,
 add the `--project` argument with the name of the browser.
 For example, to run tests against Chromium only, run:
 
-```
+```sh
 npx playwright test --project chromium
 ```
 
@@ -166,7 +173,7 @@ and should be reserved primarily for debugging tests one at a time.
 
 For example:
 
-```
+```sh
 npx playwright test tests/example.spec.ts --headed --workers 1 --project chromium
 ```
 
@@ -181,7 +188,7 @@ it can help you find locators and interaction methods quickly.
 
 To launch the test generator, run:
 
-```
+```sh
 npx playwright codegen
 ```
 
