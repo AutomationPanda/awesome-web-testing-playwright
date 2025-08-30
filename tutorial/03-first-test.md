@@ -231,7 +231,7 @@ Add the following [assertions](https://playwright.dev/docs/test-assertions):
 ```typescript
     await expect(page.locator('[name="board-title"]')).toHaveValue('Chores');
     await expect(page.getByPlaceholder('Enter list title...')).toBeVisible();
-    await expect(page.locator('[data-testid="list"]')).not.toBeVisible();
+    await expect(page.getByTestId('list')).not.toBeVisible();
 ```
 
 These assertions will make sure the new board page opens correctly.
@@ -266,7 +266,7 @@ The updated code should look something like this:
     // Create a new list
     await page.getByPlaceholder('Enter list title...').fill('TODO');
     await page.getByPlaceholder('Enter list title...').press('Enter');
-    await expect(page.locator('[data-testid="list-name"]')).toHaveValue('TODO');
+    await expect(page.getByTestId('list-name')).toHaveValue('TODO');
 ```
 
 
@@ -295,7 +295,7 @@ Assertions should verify that the three cards appear.
 Playwright makes it easy to verify the text not just for one element but for a list of elements:
 
 ```typescript
-    await expect(page.locator('[data-testid="card-text"]')).toHaveText(
+    await expect(page.getByTestId('card-text')).toHaveText(
         ['Buy groceries', 'Mow the lawn', 'Walk the dog']);
 ```
 
@@ -379,12 +379,12 @@ test('Create a new board with a list and cards', async ({ page }) => {
     await page.getByPlaceholder('Name of your first board').press('Enter');
     await expect(page.locator('[name="board-title"]')).toHaveValue('Chores');
     await expect(page.getByPlaceholder('Enter list title...')).toBeVisible();
-    await expect(page.locator('[data-testid="list"]')).not.toBeVisible();
+    await expect(page.getByTestId('list')).not.toBeVisible();
 
     // Create a new list
     await page.getByPlaceholder('Enter list title...').fill('TODO');
     await page.getByPlaceholder('Enter list title...').press('Enter');
-    await expect(page.locator('[data-testid="list-name"]')).toHaveValue('TODO');
+    await expect(page.getByTestId('list-name')).toHaveValue('TODO');
 
     // Add cards to the list
     await page.getByText('Add another card').click();
@@ -394,7 +394,7 @@ test('Create a new board with a list and cards', async ({ page }) => {
     await page.getByRole('button', { name: 'Add card' }).click();
     await page.getByPlaceholder('Enter a title for this card...').fill('Walk the dog');
     await page.getByRole('button', { name: 'Add card' }).click();
-    await expect(page.locator('[data-testid="card-text"]')).toHaveText(
+    await expect(page.getByTestId('card-text')).toHaveText(
         ['Buy groceries', 'Mow the lawn', 'Walk the dog']);
     
     // Navigate to the home page
