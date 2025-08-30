@@ -62,7 +62,7 @@ There are eight chapters in total:
 8. Learning and practicing more
 
 Chapter-by-chapter tutorial instructions are provided under the `tutorial` folder.
-This repository also contains a branch for each chapter's example code.
+This repository also contains each chapter's example code under the `chapter-code` folder.
 
 
 ## Ready to get started?
