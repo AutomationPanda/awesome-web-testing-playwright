@@ -1,6 +1,6 @@
 {
   "name": "trelloapp-vue-vite-ts",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "start": "vite",
     "lint": "prettier --write \"src/**/*.{ts,vue,js}\" && eslint \"**/*.{ts,vue,js}\" --fix && echo \"✅ All files passed linting!\"",
