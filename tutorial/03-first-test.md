@@ -433,3 +433,32 @@ npx playwright test tests/trello.spec.ts --workers 1
 ```
 
 We will fix this later in the tutorial.
+
+
+## Running the app with the tests
+
+To make testing easier, you can configure Playwright to
+[automatically launch the web app](https://playwright.dev/docs/test-webserver#configuring-a-web-server)
+when running tests.
+That way, you don't need to remember to run `npm start` the app before running tests.
+
+Add the following configuration to `playwright.config.ts`:
+
+```typescript
+export default defineConfig({
+  // ...
+  webServer: {
+    command: 'npm run start',
+    url: 'http://127.0.0.1:3000',
+    reuseExistingServer: !process.env.CI,
+  },
+});
+```
+
+Then, stop running the web app and try running the Trello test again:
+
+```sh
+npx playwright test --ui
+```
+
+Make sure it works.
