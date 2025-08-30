@@ -7,7 +7,7 @@ This GitHub repository provides:
 
 1. an [`app`](/app/) directory with the web app to test
 2. a [`tutorial`](/tutorial/) directory with all instructions by chapter
-3. a [`tests`](/tests/) directory with example code for each chapter
+3. a [`chapter-code`](/chapter-code/) directory with example code for each chapter
 
 
 ## Prerequisites
